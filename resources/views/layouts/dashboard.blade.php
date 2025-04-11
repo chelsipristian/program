@@ -14,7 +14,7 @@
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
     <!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    @vite(['resources/sass/app.scss', 'resources/sass/dashboard.scss', 'resources/js/app.js'])
 </head>
 <body>
     <div id="app">
@@ -72,10 +72,12 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="py-2">
             <div class="row">
                 <div class="col-md-2">
-                    <x-menu :active="$active"/>
+                    <x-menu :active="$active"/>  
+                </div>
+                <div class="col-md-10 main-content p-5">
                     @yield('content')
                 </div>
             </div>
