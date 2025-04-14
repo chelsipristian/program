@@ -33,6 +33,7 @@
                             @enderror
                         </div>
                         <div class="form-group">
+                            <button type="button" onclick="window.history.back()" class="btn btn-sm btn-secondary">Cancel</button>
                             <button type="submit" class="btn btn-success btn-sm">Update</button>
                         </div>
                     </form>

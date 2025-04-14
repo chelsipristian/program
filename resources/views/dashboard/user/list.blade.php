@@ -4,12 +4,12 @@
     <div class="card">
         <div class="card-header">
             <div class="row">
-                <div class="col-8">
+                <div class="col-8 align-self-center">
                     <h3>Users</h3>
                 <div class="col-4">
                     <form method="get" action="{{ url('dashboard/users') }}">
                         <div class="ïnput-grup">
-                            <input type="text" class="form-control" name="q" value="{{ $request['q'] ?? '' }}">
+                            <input type="text" class="form-control form-control-sm" name="q" value="{{ $request['q'] ?? '' }}">
                             <div class="input-grup-append">
                                 <button type="submit" class="btn btn-secondary btn-sm">Search</button>
                             </div>
