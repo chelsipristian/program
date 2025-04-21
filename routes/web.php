@@ -19,6 +19,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::middleware('auth')->group(function(){
+
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/dashboard', [App\Http\Controllers\dashboard\DashboardController::class, 'index'])->name('home');
 
@@ -27,3 +29,12 @@ Route::get('/dashboard/users', [App\Http\Controllers\dashboard\UserController::c
 Route::get('/dashboard/user/edit/{id}', [App\Http\Controllers\dashboard\UserController::class, 'edit'])->name('home');
 Route::post('/dashboard/user/update/{id}', [App\Http\Controllers\dashboard\UserController::class, 'update'])->name('home');
 Route::delete('/dashboard/user/delete/{id}', [App\Http\Controllers\dashboard\UserController::class, 'destroy'])->name('home');
+
+Route::get('/dashboard/student', [App\Http\Controllers\dashboard\StudentController::class, 'index'])->name('dashboard.student');
+Route::get('/dashboard/student/create', [App\Http\Controllers\dashboard\StudentController::class, 'create'])->name('dashboard.student.create');
+Route::post('/dashboard/student', [App\Http\Controllers\dashboard\StudentController::class, 'store'])->name('dashboard.student.store');
+Route::delete('/dashboard/student{student}', [App\Http\Controllers\dashboard\StudentController::class, 'destroy'])->name('dashboard.student.delete');
+Route::get('/dashboard/student/edit/{student}', [App\Http\Controllers\dashboard\StudentController::class, 'edit'])->name('dashboard.student.edit');
+Route::put('/dashboard/student/edit/{student}', [App\Http\Controllers\dashboard\StudentController::class, 'update'])->name('dashboard.student.update');
+});
+

@@ -72,7 +72,7 @@
             </div>
         </nav>
 
-        <main class="py-2">
+        <main class="py-6">
             <div class="row">
                 <div class="col-md-2">
                     <x-menu :active="$active"/>  

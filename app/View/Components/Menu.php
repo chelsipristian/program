@@ -31,10 +31,19 @@ class Menu extends Component
     public function list(){
         return[
             [
-                'label' => 'Dashboard'
+                'label' => 'Dashboard',
+                'route' => 'dashboard',
+                'icon'  => 'fa-solid fa-house-chimney'
             ],
             [
-                'label' => 'Users'
+                'label' => 'Users',
+                'route' => 'dashboard.users',
+                'icon'  => 'fas fa-user'
+            ],
+            [
+                'label' => 'Student',
+                'route' => 'dashboard.student',
+                'icon'  => 'fas fa-user'
             ]
         ];
     }
