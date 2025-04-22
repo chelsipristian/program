@@ -5,6 +5,10 @@
         <a href="{{route('dashboard.student.create')}}" class="btn btn-primary">+ Student</a>
     </div>
 
+    <div class="mb-2">
+        <a href="{{ route('generate.pdf') }}" class="btn btn-primary">Generate Laporan PDF</a>
+    </div>
+
     @if(session()->has('message'))
     <div class="alert alert-success">
         <strong>{{session()->get('message')}}</strong>

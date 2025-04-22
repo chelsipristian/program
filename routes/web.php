@@ -36,5 +36,7 @@ Route::post('/dashboard/student', [App\Http\Controllers\dashboard\StudentControl
 Route::delete('/dashboard/student{student}', [App\Http\Controllers\dashboard\StudentController::class, 'destroy'])->name('dashboard.student.delete');
 Route::get('/dashboard/student/edit/{student}', [App\Http\Controllers\dashboard\StudentController::class, 'edit'])->name('dashboard.student.edit');
 Route::put('/dashboard/student/edit/{student}', [App\Http\Controllers\dashboard\StudentController::class, 'update'])->name('dashboard.student.update');
+
+Route::get('/generate-pdf', [App\Http\Controllers\dashboard\PdfStudentController::class, 'generatePdf'])->name('generate.pdf');
 });
 
